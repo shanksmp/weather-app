@@ -1,0 +1,39 @@
+/* Default styles for navbar text color */
+.navbar {
+    color: #212529; /* Default text color */
+}
+
+.navbar .navbar-brand {
+    color: #212529; /* Default color for navbar-brand */
+}
+
+.navbar .nav-link {
+    color: #212529; /* Default color for nav links */
+}
+
+/* Dark mode styles */
+.navbar.dark-mode {
+    color: #ffffff; /* Text color in dark mode */
+}
+
+.navbar.dark-mode .navbar-brand {
+    color: #ffffff; /* Color for navbar-brand in dark mode */
+}
+
+.navbar.dark-mode .nav-link {
+    color: #ffffff; /* Color for nav links in dark mode */
+}
+
+/* Mode button styles */
+.navbar #mode {
+    position: absolute;
+    right: 70px;
+    bottom: 13px;
+    background-color: transparent;
+    border: none;
+    color: #212529; /* Default icon color */
+}
+
+.navbar.dark-mode #mode {
+    color: #ffffff; /* Icon color in dark mode */
+}

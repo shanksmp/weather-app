@@ -1,0 +1,75 @@
+/* Ensure the parent container takes full width and centers its content */
+.dataDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the container within the viewport */
+    padding: 0; /* Remove padding if any */
+    width: calc(100vw - 4cm); /* Full viewport width minus 2cm total for margins */
+    height: 80vh; /* Maintain the same height */
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Allows for centered positioning */
+}
+
+/* Style the weather-data section */
+#weather-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0; /* Remove padding */
+    border: none;
+    border-radius: 10px;
+    width: 100%; /* Ensure full width within the parent */
+    height: 100%; /* Full height of the container */
+    overflow: hidden; /* Ensures any overflowing content is hidden */
+    position: relative; /* For positioning child elements if needed */
+}
+
+/* Style the image */
+#weather-data img {
+    width: 100%; /* Fill the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Overlay text styling */
+.text-overlay {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow for better readability */
+}
+
+.city-name {
+    font-size: 3em; /* Adjust font size as needed */
+    margin: 0;
+    font-weight: bold;
+}
+
+.date, .update-time {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Overlay card styling */
+.card-overlay {
+    position: absolute; /* Position the card absolutely within its relative parent */
+    top: 50%; /* Center vertically */
+    left: 85%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning to center the card */
+    z-index: 1; /* Ensure the card appears above the image */
+}
+
+/* Style the card with transparency */
+.card {
+    background-color: rgba(139, 70, 70, 0); 
+    backdrop-filter: blur(10px); /* Optional: Add a blur effect for a glass-like appearance */
+    border-radius: 10px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(26, 13, 33, 0.529); 
+    overflow: hidden; /* Hide overflow for clean edges */
+    color: white;
+}
