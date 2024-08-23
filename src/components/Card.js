@@ -1,16 +1,25 @@
 import React from 'react';
 
-function Card() {
+function Card(props) {
+    const weatherData = props.weatherData;
+
     return (
         <div className="card-overlay">
             <div className="card" style={{ width: '18rem' }}>
                 <img className="card-img-top" src="/4102326_cloud_sun_sunny_weather_icon.png" alt="Card cap" />
                 <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </p>
-                    
+                    {weatherData ? (
+                        <div>
+                            <h5 className="card-title">{weatherData.location.name.split(',')[0]}</h5>
+                            <p className="card-text">
+                                {`Avg Temp: ${weatherData.timelines.daily[0].values.temperatureAvg}°C`} <br />
+                                {`Max Temp: ${weatherData.timelines.daily[0].values.temperatureMax}°C`} <br />
+                                {`Min Temp: ${weatherData.timelines.daily[0].values.temperatureMin}°C`}
+                            </p>
+                        </div>
+                    ) : (
+                        <p>Loading...</p>
+                    )}
                 </div>
             </div>
         </div>

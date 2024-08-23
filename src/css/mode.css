@@ -27,8 +27,8 @@
 /* Mode button styles */
 .navbar #mode {
     position: absolute;
-    right: 70px;
-    bottom: 13px;
+    right: 310px;
+    bottom: 14px;
     background-color: transparent;
     border: none;
     color: #212529; /* Default icon color */
