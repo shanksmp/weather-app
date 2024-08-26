@@ -5,7 +5,7 @@ import Mode from '../components/Mode.js';
 function Navbar(props) {
     const getCityName = (event) => {
         event.preventDefault(); // Prevent the form from submitting
-        props.onSearch(props.cityName); // Call the onSearch prop with the current city name
+        props.onSearch(event); // Pass the event object to the onSearch function
     };
     
     const cityNameOnChange = (event) => {
